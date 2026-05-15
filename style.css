@@ -5,3 +5,18 @@
 #loading {
   font-size: xx-large;
 }
+
+#episode-link {
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#home-link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.is-hidden {
+  display: none;
+}

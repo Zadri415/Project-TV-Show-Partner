@@ -1,46 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | Alex Jamshidi (Alex-Jamshidi)</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
 
-  <body>
-    <label for="show-select">Choose a show:</label>
-    <select id="show-select">
-      <option value="">Select a show...</option>
-    </select>
-    <label for="episode-select">Choose an episode:</label>
-    <select id="episode-select">
-      <option value="">Show all episodes</option>
-    </select>
-    <label
-      >Search
-      <input id="search-input" type="text" placeholder="Search episodes..." />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>TV Show Project | Alex Jamshidi (Alex-Jamshidi)</title>
+  <link href="style.css" rel="stylesheet" >
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" >
+</head>
+
+<body>
+
+  <div id="search-container">
+    <label for="search-input">Search
+      <input id="search-input" type="text" placeholder="Search episodes..." >
     </label>
-    <p id="search-count"></p>
-    <p id="status-message">--- Loading Data --- Please Wait...</p>
-    <div id="episodes"></div>
-    <template id="episode-card-template">
-      <section>
-        <img src="" alt="Episode Screenshot" />
-        <h3>Ep Code and Name</h3>
-        <p summary>Summary</p>
-      </section>
-    </template>
+    <span id="search-count"></span>
+  </div>
 
-    <footer>
-      Episode data from
-      <a href="https://www.tvmaze.com/">TVMaze.com</a>
-    </footer>
+  <div id="show-select-container">
+    <label for="show-select">Choose a show:</label>
+    <select id="show-select"></select>
+  </div>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+  <div id="episode-select-container" class="is-hidden">
+    <label for="episode-select">Choose an episode:</label>
+    <select id="episode-select"></select>
+  </div>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js" defer></script>
-  </body>
+  <div class="nav-controls">
+    <a href="#" id="home-link"></a>
+  </div>
+
+  <p id="status-message">--- Loading Data --- Please Wait...</p>
+
+  <div id="episodes"></div>
+  <template id="episode-card-template">
+    <section>
+      <img src="" alt="" >
+      <h3>Ep Code and Name</h3>
+      <p summary>Summary</p>
+    </section>
+  </template>
+
+  <div id="shows"></div>
+  <template id="show-card-template">
+    <section>
+      <img src="" alt="" >
+      <br><br>
+      <a href="#" class="episode-link">Show Name</a>
+      <p summary>Summary</p>
+      <p genres>Genres</p>
+      <p status>Status</p>
+      <p rating>Rating</p>
+      <p runtime>Runtime</p>
+    </section>
+  </template>
+
+  <footer>
+    Episode data from
+    <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">TVMaze.com</a>
+  </footer>
+
+  <script src="script.js" type="module"></script>
+
+</body>
+
 </html>
